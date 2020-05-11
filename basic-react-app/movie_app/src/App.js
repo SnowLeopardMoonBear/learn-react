@@ -3,11 +3,11 @@ import Movie from './Movie.js';
 import './App.css';
 
 const movies = [
-  {title:"Parasite", id:1},
-  {title:"The Host"},
-  {title:"Mother"},
-  {title:"Snowpiercer"},
-  {title:"Barking Dogs Never Bite"}
+  {title:"Parasite", poster: "https://wiseaboutbears.org/wp-content/uploads/2014/04/bearmountian-ashsept-2013D800.jpg"},
+  {title:"The Host", poster: "https://wiseaboutbears.org/wp-content/uploads/2014/04/bearmountian-ashsept-2013D800.jpg"},
+  {title:"Mother", poster: "https://wiseaboutbears.org/wp-content/uploads/2014/04/bearmountian-ashsept-2013D800.jpg"},
+  {title:"Snowpiercer", poster: "https://wiseaboutbears.org/wp-content/uploads/2014/04/bearmountian-ashsept-2013D800.jpg"},
+  {title:"Barking Dogs Never Bite", poster: "https://wiseaboutbears.org/wp-content/uploads/2014/04/bearmountian-ashsept-2013D800.jpg"}
 ];
 
 // all components should have a render function

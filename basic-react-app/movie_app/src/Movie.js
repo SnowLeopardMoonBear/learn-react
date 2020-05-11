@@ -4,7 +4,8 @@ import './Movie.css'; // import css for this component
 
 class Movie extends Component{
     static propTypes = {
-        title: PropTypes.bool.isRequired
+        title: PropTypes.string.isRequired,
+        poster: PropTypes.string.isRequired
     } // to check type and requirement of a prop
     // but not working well...
 
@@ -12,16 +13,20 @@ class Movie extends Component{
         return(
             <div>
                 <h2>{this.props.title}</h2>
-                <MoviePoster />
+                <MoviePoster poster={this.props.poster} />
             </div>
         )
     }
 
 }
 class MoviePoster extends Component{
+
+    static propTypes = {
+        poster: PropTypes.string.isRequired
+    }
     render(){
         return(
-            <img src="https://wiseaboutbears.org/wp-content/uploads/2014/04/bearmountian-ashsept-2013D800.jpg" alt="bear"/>
+            <img src={this.props.poster} alt="movie poster"/>
         )
     }
 }
