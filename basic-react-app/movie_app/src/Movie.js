@@ -26,7 +26,7 @@ class MoviePoster extends Component{
     }
     render(){
         return(
-            <img src={this.props.poster} alt="movie poster"/>
+            <img src={this.props.poster} width="200px" height="280px" alt="movie poster"/>
         )
     }
 }
