@@ -3,7 +3,7 @@ import Movie from './Movie.js';
 import './App.css';
 
 const movies = [
-  {title:"Parasite"},
+  {title:"Parasite", id:1},
   {title:"The Host"},
   {title:"Mother"},
   {title:"Snowpiercer"},
@@ -16,8 +16,9 @@ class App extends Component {
     return (
       // using map function will iterate iterables  
       <div className="App">
-        {movies.map(movie => {
-          return <Movie title={movie.title}/>
+        {/* index is the index of an array provided */}
+        {movies.map((movie, index) => {
+          return <Movie title={movie.title} key={index}/> // recommended to provide a unique key
         })};
       </div>
     );
