@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Movie from './Movie.js';
 import './App.css';
 
 // all components should have a render function
@@ -7,6 +8,11 @@ class App extends Component {
     return (
       <div className="App">
         my first div!
+        <Movie/>
+        <Movie/>
+        <Movie/>
+        <Movie/>
+        <Movie/>
       </div>
     )
   }
