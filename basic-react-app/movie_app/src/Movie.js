@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Movie.css'; // import css for this component
 
 class Movie extends Component{
+    static propTypes = {
+        title: PropTypes.bool.isRequired
+    } // to check type and requirement of a prop
+    // but not working well...
+
     render(){
         return(
             <div>
