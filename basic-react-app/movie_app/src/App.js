@@ -3,26 +3,24 @@ import Movie from './Movie.js';
 import './App.css';
 
 const movies = [
-  "Parasite",
-  "The Host",
-  "Mother",
-  "Snowpiercer",
-  "Barking Dogs Never Bite"
+  {title:"Parasite"},
+  {title:"The Host"},
+  {title:"Mother"},
+  {title:"Snowpiercer"},
+  {title:"Barking Dogs Never Bite"}
 ];
 
 // all components should have a render function
 class App extends Component {
   render() {
     return (
+      // using map function will iterate iterables  
       <div className="App">
-        my first div!
-        <Movie title={movies[0]} />
-        <Movie title={movies[1]} />
-        <Movie title={movies[2]} />
-        <Movie title={movies[3]} />
-        <Movie title={movies[4]} />
+        {movies.map(movie => {
+          return <Movie title={movie.title}/>
+        })};
       </div>
-    )
+    );
   }
 }
 
