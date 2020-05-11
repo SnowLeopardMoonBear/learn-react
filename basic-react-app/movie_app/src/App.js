@@ -12,7 +12,15 @@ const movies = [
 
 // all components should have a render function
 class App extends Component {
+  componentWillMount() {
+    console.log('will mount will be executed first');
+  }
+  componentDidMount() {
+    console.log('did mount will be the third');
+  }
+
   render() {
+    console.log('render will be the second');
     return (
       // using map function will iterate iterables  
       <div className="App">
