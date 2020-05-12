@@ -12,11 +12,21 @@ const movies = [
 
 // all components should have a render function
 class App extends Component {
+  // whenever state changes, render() is called
   componentWillMount() {
     console.log('will mount will be executed first');
   }
+  state = {
+    greeting: 'Hello'
+  }
+
   componentDidMount() {
-    console.log('did mount will be the third');
+    setTimeout(() => {
+      // always use this.setState() method to modify states 
+      this.setState({
+        greeting: 'new hello'
+      })
+    }, 2000)
   }
 
   render() {
@@ -24,6 +34,7 @@ class App extends Component {
     return (
       // using map function will iterate iterables  
       <div className="App">
+        {this.state.greeting}
         {/* index is the index of an array provided */}
         {movies.map((movie, index) => {
           return <Movie title={movie.title} poster={movie.poster} key={index}/> // recommended to provide a unique key
