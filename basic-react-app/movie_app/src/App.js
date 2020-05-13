@@ -8,7 +8,7 @@ import "./App.css";
 class App extends Component {
   // COMPONENT has state
   state = {
-    greeting: "Hello"
+    
   };
 
   // whenever state changes, render() is called
@@ -17,45 +17,46 @@ class App extends Component {
   }
 
   componentDidMount() {
-    setTimeout(()=>{
-      this.setState({
-        movies: [
-          {
-            title: "Parasite",
-            poster:
-              "https://image.chosun.com/sitedata/image/202002/11/2020021100227_0.jpg",
-          },
-          {
-            title: "The Host",
-            poster: "https://t1.daumcdn.net/cfile/12110210A8F1224840",
-          },
-          {
-            title: "Mother",
-            poster:
-              "https://img1.daumcdn.net/thumb/C155x225/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fcfile%2F1804A4214A02B527D6",
-          },
-          {
-            title: "Snowpiercer",
-            poster: "https://t1.daumcdn.net/cfile/036DD04B51B5236718",
-          },
-          {
-            title: "Barking Dogs Never Bite",
-            poster:
-              "https://img1.daumcdn.net/thumb/C155x225/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fcfile%2F156F1B10AB15040D30",
-          },
-        ],
-      })
-    }, 2000);
-    setTimeout(()=>{
-      // always use this.setState() method to modify states
-      // With setState, we can implement scroll dynamic loading! AWESOME!
-      this.setState({
-        movies: [...this.state.movies, { // "...[var]" means to add something after the existing iterable
-          title: "Okja",
-          poster: "https://i.pinimg.com/originals/97/a3/c5/97a3c5ad34f0af11f4fb2e37ed845a25.jpg"
-        }]
-      })
-    }, 5000);
+    fetch('https://yts.mx/api/v2/list_movies.json') // React gets movie list from the API without address bar and page refresh. check network tab of dev tool
+    // setTimeout(()=>{
+    //   this.setState({
+    //     movies: [
+    //       {
+    //         title: "Parasite",
+    //         poster:
+    //           "https://image.chosun.com/sitedata/image/202002/11/2020021100227_0.jpg",
+    //       },
+    //       {
+    //         title: "The Host",
+    //         poster: "https://t1.daumcdn.net/cfile/12110210A8F1224840",
+    //       },
+    //       {
+    //         title: "Mother",
+    //         poster:
+    //           "https://img1.daumcdn.net/thumb/C155x225/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fcfile%2F1804A4214A02B527D6",
+    //       },
+    //       {
+    //         title: "Snowpiercer",
+    //         poster: "https://t1.daumcdn.net/cfile/036DD04B51B5236718",
+    //       },
+    //       {
+    //         title: "Barking Dogs Never Bite",
+    //         poster:
+    //           "https://img1.daumcdn.net/thumb/C155x225/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fcfile%2F156F1B10AB15040D30",
+    //       },
+    //     ],
+    //   })
+    // }, 2000);
+    // setTimeout(()=>{
+    //   // always use this.setState() method to modify states
+    //   // With setState, we can implement scroll dynamic loading! AWESOME!
+    //   this.setState({
+    //     movies: [...this.state.movies, { // "...[var]" means to add something after the existing iterable
+    //       title: "Okja",
+    //       poster: "https://i.pinimg.com/originals/97/a3/c5/97a3c5ad34f0af11f4fb2e37ed845a25.jpg"
+    //     }]
+    //   })
+    // }, 5000);
   }
   // Coding convention: custom funtion made by myself starts with '_' to distinguish it from react function
   _renderMovies = () => {
