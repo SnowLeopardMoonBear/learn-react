@@ -16,8 +16,12 @@ class App extends Component {
     console.log("will mount will be executed first");
   }
 
+  //Made a Promise function by adding .then().(...).catch(): 1. for asynchronous loading 2. for making scenario(success or error)
   componentDidMount() {
-    fetch('https://yts.mx/api/v2/list_movies.json') // React gets movie list from the API without address bar and page refresh. check network tab of dev tool
+    fetch('https://yts.mx/api/v2/list_movies.json?sort_by=rating') // React gets movie list from the API without address bar and page refresh. check network tab of dev tool
+    .then(response => response.json())// response data comes in binary so we need to JSONify it to read it
+    .then(bear => console.log(bear)) // argument 'bear' is returned data from previous .then() function
+    .catch(err => console.log(err)) 
     // setTimeout(()=>{
     //   this.setState({
     //     movies: [
@@ -60,7 +64,7 @@ class App extends Component {
   }
   // Coding convention: custom funtion made by myself starts with '_' to distinguish it from react function
   _renderMovies = () => {
-    const movies = this.state.movies.map((movie, index) => {
+    const movies = this.state.movies.map((movie, index) => { // When iterating iterables with .map(), index argument is given automatically
       return <Movie title={movie.title} poster={movie.poster} key={index} />
     })
     return movies
