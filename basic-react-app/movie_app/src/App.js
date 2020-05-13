@@ -70,6 +70,13 @@ class App extends Component {
     return movies
   }
 
+  _makeMovies = () => {
+
+  }
+  _callApi = () => {
+
+  }
+
   render() {
     console.log("render will be the second");
     return (
