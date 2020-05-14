@@ -6,19 +6,20 @@ import "./Movie.css"; // import css for this component
 function Movie({title, poster}){ //Q)Why use curly brackets to wrap arguments?
   return(
     <div>
-      <h2>{this.props.title}</h2>
-      <MoviePoster poster={this.props.poster} />
+      <h2>{title}</h2>
+      <MoviePoster poster={poster} />
     </div>
   );
 }
 function MoviePoster({poster}){
   return (
     <img
-      src={this.props.poster}
+      src={poster}
       alt="movie poster"
     />
   );
 }
+
 
 Movie.propTypes = {
   title: PropTypes.string.isRequired,
