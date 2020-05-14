@@ -1,18 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Movie.css"; // import css for this component
+import "./App-loading.css" // import css for loading
 
 // The movie components doesn't need to update, so we're gonna make them as functions.
 function Movie({title, poster, genres, synopsis}){ //Q)Why use curly brackets to wrap arguments?
   return(
     <div className="Movie">
-      <div className="Movie__Columns">
+      <div className="Movie__Column">
         <MoviePoster poster={poster} alt={title}/>
       </div>
-      <div className="Movie__Columns">
+      <div className="Movie__Column">
         <h1>{title}</h1>
         <div className="Movie__Genres">
-          {genres.map(genre => <MovieGenre genre={genre} key={genre.index}/>)}
+          {genres.map(genre => <MovieGenre className="MovieGenre" genre={genre} key={genres.index}/>)}
         </div>
         <p className="Movie__Synopsis">
           {synopsis}

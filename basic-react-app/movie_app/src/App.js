@@ -48,17 +48,19 @@ class App extends Component {// COMPONENT has state
   };
 
   _loading = () => {
-    return <h1 className="blinking">Loading...</h1> // In JSX, have to write className instead of class.
+    return <h1 className="App-loading">Loading...</h1> // In JSX, have to write className instead of class.
   }
 
   // whenever state changes, render() is called
   render() {
-    console.log(this.state.movies);
+    const { movies } = this.state; // equivalent to const movies = this.state.movies
+    console.log(movies);
     return (
-      <div className="App">
+      <div className={movies? "App" : "App-loading"}> 
         {this.state.movies ? this._renderMovies() : this._loading()}
       </div>
       // Don't append semicolons at the end of jsx statements. They will be rendered as string.
+      // can dynamically allocate CSS value at className
     );
   }
 }
