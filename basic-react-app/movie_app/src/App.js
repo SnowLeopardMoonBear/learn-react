@@ -20,9 +20,11 @@ class App extends Component {// COMPONENT has state
     const movies = this.state.movies.map((movie) => {// When iterating iterables with .map(), index argument is given automatically
       return (
         <Movie
-          title={movie.title}
-          poster={movie.small_cover_image}
+          title={movie.title_english}
+          poster={movie.medium_cover_image}
           key={movie.id}
+          genres={movie.genres}
+          synopsis={movie.synopsis}
         />
       ); // using index as key of component can make the code run slower
     });
@@ -46,7 +48,7 @@ class App extends Component {// COMPONENT has state
   };
 
   _loading = () => {
-    return <h1 class="blinking">Loading...</h1>
+    return <h1 className="blinking">Loading...</h1> // In JSX, have to write className instead of class.
   }
 
   // whenever state changes, render() is called
