@@ -26,8 +26,6 @@ class MoviePoster extends Component {
     return (
       <img
         src={this.props.poster}
-        width="200px"
-        height="280px"
         alt="movie poster"
       />
     );
