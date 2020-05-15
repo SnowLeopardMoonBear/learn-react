@@ -43,8 +43,18 @@ userSchema.pre("save", function (next) {
         next()
       })
     })
+  } else {
+    next() // don't forget to call next() whether password changes or not
   }
 });
+
+// Custom function of the schema tp compare encrypted plain pw with stored encrypted pw 
+userSchema.methods.comparePassword = function(plainPassword, cb) {
+  bcrypt.compare(plainPassword, this.password, function(err, isMatch){
+    if(err) return cb(err),
+    cb(null, isMatch)
+  })
+}
 
 // Make Mongoose model with schema above
 const User = mongoose.model("User", userSchema); // 모델을 몽구스 모델화

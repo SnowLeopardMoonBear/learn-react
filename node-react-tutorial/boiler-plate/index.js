@@ -43,6 +43,32 @@ app.post("/register", (req, res) => {
   }); // method from mongoDB. to save data
 });
 
+// implement login
+// 1. Search requested email from DB
+// 2. If exists, check if the password is correct
+// 3. If password matches, give token to user
+app.post('/login', (req, res) => {
+  // 1. Search email data from requested email inside DB with .findOne() method
+  User.findOne({email: req.body.email}, (err, user)=>{
+    if (!user){
+      return res.json({
+        loginSuccess: false, 
+        message: "no User matches"
+      })
+    }
+    // Use custom method from DB schema
+    user.comparePassword(req.body.password,(err, isMatch) => {
+      if(!isMatch)
+        return res.json({loginSuccess: false, message:"wrong password"})
+      // if pw matches, generate login token and attach on response
+      user.generateToken((err, user)=>{
+
+      })
+
+    })
+  }) 
+})
+
 app.listen(port, () => {
   console.log(`Backend server listening at port ${port}!`);
 });
