@@ -27,8 +27,9 @@ const userSchema = mongoose.Schema({
         type: Number
     }
 })
+// unique:1 means the property should be unique in the model
 
-// Make the schema Mongoose model
+// Make Mongoose model with schema above
 const User = mongoose.model('User', userSchema); // 모델을 몽구스 모델화
 
 module.exports = { User };

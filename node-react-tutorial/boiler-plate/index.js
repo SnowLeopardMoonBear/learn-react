@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //to analyze json data
 app.use(bodyParser.json());
 
+// connect MongoDB cluster with mongoose
 const mongoose = require("mongoose");
 mongoose
   .connect(
@@ -32,6 +33,7 @@ app.post("/register", (req, res) => {
   const user = new User(req.body); // bodyParser made it possible
   user.save((err, userInfo) => { //save user info
     if (err) return res.json({ success: false, err });
+    console.log(userInfo);
     return res.status(200).json({
       success: true
     });
