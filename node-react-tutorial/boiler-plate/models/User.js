@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const userSchema = mongoose.Schema({
     name: {
         type: String,
-        maxlength: s50
+        maxlength: 50
     },
     email: {
         type: String,
@@ -31,4 +31,4 @@ const userSchema = mongoose.Schema({
 // Make the schema Mongoose model
 const User = mongoose.model('User', userSchema); // 모델을 몽구스 모델화
 
-module.exports = {User};
+module.exports = { User };
