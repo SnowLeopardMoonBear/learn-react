@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const port = 5000;
 const bodyParser = require("body-parser"); //to use request body data
+
+const config = require('./config/key')
 const {User} = require('./models/User')
 
 //to analyze application/x-www-form-urlencoded form data
@@ -11,10 +13,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // connect MongoDB cluster with mongoose
+// mongoURI is saved at dev.js or process.env.MONGO_URI of heroku
 const mongoose = require("mongoose");
 mongoose
   .connect(
-    "mongodb+srv://mindflo:Sm88.cZpwMW$uwG@boilerplate-hreqx.mongodb.net/test?retryWrites=true&w=majority",
+    config.mongoURI,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
