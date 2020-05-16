@@ -3,6 +3,7 @@ const app = express();
 const port = 5000;
 const bodyParser = require("body-parser"); //to use request body data
 const cookieParser = require("cookie-parser");
+const { auth } = require("./middleware/auth.js");
 
 const config = require("./config/key");
 const { User } = require("./models/User");
@@ -71,6 +72,24 @@ app.post("/api/users/login", (req, res) => {
           .json({ loginSuccess: true, userId: user._id });
       });
     });
+  });
+});
+
+// authentication with auth middleware
+// 1. get token from client cookie
+// 2. decode token and find user
+// 3. if user exists, auth success
+app.get("/api/users/auth", auth, (req, res) => {
+  let token = req.cookies.x_auth;
+  res.status(200).json({
+    _id: req.user._id,
+    isAdmin: req.user.role,
+    isAuth: true,
+    email: req.user.email,
+    name: req.user.name,
+    lastname: req.user.lastname,
+    role: req.user.role,
+    image: req.user.image
   });
 });
 

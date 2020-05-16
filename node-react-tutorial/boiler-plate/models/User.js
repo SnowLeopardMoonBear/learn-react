@@ -68,6 +68,20 @@ userSchema.methods.generateToken = function(cb){
   })
 }
 
+// find user by token for auth. statics is different from method
+userSchema.statics.findByToken = function(token, cb) {
+  var user = this;
+  // use jwt module function 
+  jwt.verify(token, 'secretToken', function(err, decoded){
+    // find by _id, token, using MongoDB function
+    user.findOne({"_id": decoded, "token": token}, function(err, user){
+      if(err) return cb(err);
+      cb(null, user)
+    })
+
+  })
+}
+
 // Make MongoDB model with schema above
 const User = mongoose.model("User", userSchema); //
 
