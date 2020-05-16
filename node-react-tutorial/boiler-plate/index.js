@@ -47,7 +47,7 @@ app.post("/register", (req, res) => {
 // 1. Search requested email from DB
 // 2. If exists, check if the password is correct
 // 3. If password matches, give token to user
-app.post("/login", (req, res) => {
+app.post("/api/users/login", (req, res) => {
   // 1. .findOne() method searches email
   User.findOne({ email: req.body.email }, (err, user) => {
     if (!user) {
