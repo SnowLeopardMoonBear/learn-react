@@ -93,6 +93,7 @@ app.get("/api/users/auth", auth, (req, res) => {
   });
 });
 
+// logout
 app.get('/api/users/logout', auth, (req, res)=>{
   User.findOneAndUpdate({_id:req.user._id}, 
     {token:""},
@@ -102,6 +103,10 @@ app.get('/api/users/logout', auth, (req, res)=>{
         success: true
       })
     })
+})
+
+app.get('/api/hello', (req, res)=> {
+  res.send("Gomtigomti")
 })
 
 app.listen(port, () => {
