@@ -16,7 +16,7 @@ const userSchema = mongoose.Schema({
   },
   password: {
     type: String,
-    maxlength: 50,
+    maxlength: 100,
   },
   role: {
     type: Number,
@@ -52,7 +52,7 @@ userSchema.pre("save", function (next) {
 // Custom function of the schema tp compare encrypted plain pw with stored encrypted pw 
 userSchema.methods.comparePassword = function(plainPassword, cb) {
   bcrypt.compare(plainPassword, this.password, function(err, isMatch){
-    if(err) return cb(err),
+    if(err) return cb(err); //Bug fix: change "," to ";"
       cb(null, isMatch)
   })
 }
