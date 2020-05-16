@@ -89,25 +89,21 @@ app.get("/api/users/auth", auth, (req, res) => {
     name: req.user.name,
     lastname: req.user.lastname,
     role: req.user.role,
-    image: req.user.image
+    image: req.user.image,
   });
 });
 
 // logout
-app.get('/api/users/logout', auth, (req, res)=>{
-  User.findOneAndUpdate({_id:req.user._id}, 
-    {token:""},
-    (err, user)=> {
-      if(err) return res.json({success: false, err});
-      return res.status(200).send({
-        success: true
-      })
-    })
-})
+app.get("/api/users/logout", auth, (req, res) => {
+  User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, user) => {
+    if (err) return res.json({ success: false, err });
+    return res.status(200).send({
+      success: true,
+    });
+  });
+});
 
-app.get('/api/hello', (req, res)=> {
-  res.send("Gomtigomti")
-})
+app.get("/api/hello", (req, res) => res.send("Gomtigomti"));
 
 app.listen(port, () => {
   console.log(`Backend server listening at port ${port}!`);
