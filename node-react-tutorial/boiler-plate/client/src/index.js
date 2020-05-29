@@ -1,3 +1,4 @@
+// This is the file where react starts.
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -14,6 +15,7 @@ import Reducer from './_reducers'
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore);
 
 ReactDOM.render(
+  // Wrap with a provider to use redux on this project
   <Provider
     store = {createStoreWithMiddleware(Reducer,
         window.__REDUX_DEVTOOLS_EXTENSION__ &&

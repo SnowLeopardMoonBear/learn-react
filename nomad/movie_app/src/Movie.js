@@ -40,7 +40,7 @@ function MovieGenre({genre}){
   );
 }
 
-//propTypes of Movie component
+//propTypes of Movie component. can check types or requirements of props
 Movie.propTypes = {
   title: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
