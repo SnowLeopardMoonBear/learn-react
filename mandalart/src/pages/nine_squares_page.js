@@ -1,12 +1,15 @@
-import React from 'react';
+import React from "react";
 class NineSquaresPage extends React.Component {
-    static defaultProps = {
-        name: '기본props'
-    }
-    render(){
-        return (
-            <h1>Hi, I'm nine squares page!</h1>
-        );
-    }
+  static defaultProps = {
+    name: "기본props",
+  };
+  render() {
+    return (
+      <div>
+        <h1>Name of nine-squares</h1>
+        <div class="nine-squares-for-ns-page"/>
+      </div>
+    );
+  }
 }
 export default NineSquaresPage;
