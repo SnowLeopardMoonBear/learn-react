@@ -8,7 +8,7 @@
 
 ```Array.map()
 const sampleArr = ['Hello','.map()','method!']
-const sampleMap = sampleArr.map((item, i)=>{((i.toString).concat(" ", item.toUpperCase())})
+const sampleMap = sampleArr.map((item, i)=>{((i.toString).concat(" ", item.toUpperCase())}) // concat 메서드 대신 + 연산자를 써도 된다.
 console.log(sampleMap)
 // [0 HELLO,1 .MAP(),2 METHOD!]
 ```
