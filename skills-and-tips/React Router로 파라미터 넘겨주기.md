@@ -26,3 +26,16 @@ const number = {match.params.number}
 }
 ```
 
+JS의 qs 모듈을 이용해 쿼리스트링 파싱이 가능하다.
+
+```qs 모듈
+import qs from 'qs';
+
+const num = qs.parse(location.number, {
+		ignoreQueryPrefix: true
+	});
+console.log(num.number);
+// 5
+// 파싱한 값들은 문자열 자료형으로 저장된다
+```
+
