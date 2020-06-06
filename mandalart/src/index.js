@@ -17,9 +17,10 @@ console.log(store.getState());
 
 // Provider 렌더링해서 기존의 App을 감싼다
 ReactDOM.render(
-  <Provider store={text}>
+  // <Provider store={text}>
     <Root />
-  </Provider>,
+  // </Provider>
+  ,
   document.getElementById("root")
 );
 serviceWorker.register();
