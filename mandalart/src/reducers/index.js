@@ -14,6 +14,7 @@ const initialState = {
 const update = (state = initialState, action) => {
     switch(action.type){
         case UPDATE:
+            // Object.assign() 메서드로 객체 안의 내용을 덮어쓰기
             return Object.assign({}, state, {
                 content: action.content
             });

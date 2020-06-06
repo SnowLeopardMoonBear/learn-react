@@ -22,12 +22,13 @@ const Square = styled.div`
   border-style: solid;
   width: 80px;
   height: 80px;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 400;
   float: left;
   text-align: center;
 `;
 
+// props 값 이용하는 건 아직 안 되네. 값 넘어오는 순서 때문인가
 const Center = styled.div`
   margin-left: auto;
   margin-right: auto;
@@ -40,7 +41,7 @@ const Center = styled.div`
   font-weight: 700;
   float: left;
   text-align: center;
-  background-color: #fd8bc4;
+  background-color: ${props => props.index ? `$fd{props.index}bc4` :"#fd8bc4"};
   color: aliceblue;
 `;
 class NineSquares extends React.Component {

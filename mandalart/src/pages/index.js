@@ -3,3 +3,4 @@
 export { default as MandalartPage } from "./mandalart_page.js";
 export { default as NineSquaresPage } from "./nine_squares_page.js";
 export { default as SquarePage } from "./square_page.js";
+export { default as EditPage } from "./edit_page.js";
