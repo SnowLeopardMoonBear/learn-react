@@ -11,22 +11,19 @@ const Title = Styled.h1`
 
 
 class MandalartPage extends React.Component {
-  static defaultProps = {
-    name: "기본props",
-  };
   render() {
     return (
       <Wrapper>
         <Title>My Mandalart</Title>
-        <NineSquares></NineSquares>
-        <NineSquares></NineSquares>
-        <NineSquares></NineSquares>
-        <NineSquares></NineSquares>
-        <NineSquares></NineSquares>
-        <NineSquares></NineSquares>
-        <NineSquares></NineSquares>
-        <NineSquares></NineSquares>
-        <NineSquares></NineSquares>
+        <NineSquares content={this.props.content}></NineSquares>
+        <NineSquares content={this.props.content}></NineSquares>
+        <NineSquares content={this.props.content}></NineSquares>
+        <NineSquares content={this.props.content}></NineSquares>
+        <NineSquares content={this.props.content}></NineSquares>
+        <NineSquares content={this.props.content}></NineSquares>
+        <NineSquares content={this.props.content}></NineSquares>
+        <NineSquares content={this.props.content}></NineSquares>
+        <NineSquares content={this.props.content}></NineSquares>
       </Wrapper>
     );
   }

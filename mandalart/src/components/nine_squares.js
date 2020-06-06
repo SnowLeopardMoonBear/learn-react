@@ -46,16 +46,19 @@ const Center = styled.div`
 class NineSquares extends React.Component {
   static defaultProps = {
     name: "기본props",
+    넘버1: "1번",
+    넘버2: "2번",
+    배열: [123, 456, 789]
   };
-
+  
   render() {
     return (
       <div>
         <Wrapper>
-          <Square>1</Square>
-          <Square>2</Square>
-          <Square>3</Square>
-          <Square>4</Square>
+          <Square>{this.props.content[0]}</Square>
+          <Square>{this.props.content[1]}</Square>
+          <Square>{this.props.content[2]}</Square>
+          <Square>{this.props.content[80]}</Square>
           <Center>5</Center>
           <Square>6</Square>
           <Square>7</Square>
