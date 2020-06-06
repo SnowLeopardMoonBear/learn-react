@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import NineSquares from "../components/nine_squares"
 import Styled from "styled-components"
 
@@ -28,4 +29,13 @@ class MandalartPage extends React.Component {
     );
   }
 }
+
+let mapStateToProps = (state) => {
+  return {
+    content: state.content
+  }
+}
+
+MandalartPage = connect(mapStateToProps)(MandalartPage);
+
 export default MandalartPage;
