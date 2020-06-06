@@ -44,26 +44,20 @@ const Center = styled.div`
   color: aliceblue;
 `;
 class NineSquares extends React.Component {
-  static defaultProps = {
-    name: "기본props",
-    넘버1: "1번",
-    넘버2: "2번",
-    배열: [123, 456, 789]
-  };
   
   render() {
     return (
       <div>
         <Wrapper>
-          <Square>{this.props.content[0]}</Square>
-          <Square>{this.props.content[1]}</Square>
-          <Square>{this.props.content[2]}</Square>
-          <Square>{this.props.content[80]}</Square>
-          <Center>5</Center>
-          <Square>6</Square>
-          <Square>7</Square>
-          <Square>8</Square>
-          <Square>9</Square>
+          <Square>{this.props.content[`${(this.props.index)*9+0}`]}</Square>
+          <Square>{this.props.content[`${(this.props.index)*9+1}`]}</Square>
+          <Square>{this.props.content[`${(this.props.index)*9+2}`]}</Square>
+          <Square>{this.props.content[`${(this.props.index)*9+3}`]}</Square>
+          <Center>{this.props.content[`${(this.props.index)*9+4}`]}</Center>
+          <Square>{this.props.content[`${(this.props.index)*9+5}`]}</Square>
+          <Square>{this.props.content[`${(this.props.index)*9+6}`]}</Square>
+          <Square>{this.props.content[`${(this.props.index)*9+7}`]}</Square>
+          <Square>{this.props.content[`${(this.props.index)*9+8}`]}</Square>
         </Wrapper>
       </div>
     );

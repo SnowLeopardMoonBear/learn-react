@@ -15,15 +15,15 @@ class MandalartPage extends React.Component {
     return (
       <Wrapper>
         <Title>My Mandalart</Title>
-        <NineSquares content={this.props.content}></NineSquares>
-        <NineSquares content={this.props.content}></NineSquares>
-        <NineSquares content={this.props.content}></NineSquares>
-        <NineSquares content={this.props.content}></NineSquares>
-        <NineSquares content={this.props.content}></NineSquares>
-        <NineSquares content={this.props.content}></NineSquares>
-        <NineSquares content={this.props.content}></NineSquares>
-        <NineSquares content={this.props.content}></NineSquares>
-        <NineSquares content={this.props.content}></NineSquares>
+        <NineSquares content={this.props.content} index={0}></NineSquares>
+        <NineSquares content={this.props.content} index={1}></NineSquares>
+        <NineSquares content={this.props.content} index={2}></NineSquares>
+        <NineSquares content={this.props.content} index={3}></NineSquares>
+        <NineSquares content={this.props.content} index={4}></NineSquares>
+        <NineSquares content={this.props.content} index={5}></NineSquares>
+        <NineSquares content={this.props.content} index={6}></NineSquares>
+        <NineSquares content={this.props.content} index={7}></NineSquares>
+        <NineSquares content={this.props.content} index={8}></NineSquares>
       </Wrapper>
     );
   }
