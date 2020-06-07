@@ -3,9 +3,9 @@
 export const UPDATE = "UPDATE";
 
 // new_content는 새로운 배열
-export function update(new_content) {
+export function update(index, newSquare) {
   return {
     type: UPDATE,
-    data: new_content,
+    newSquare, index
   };
 }

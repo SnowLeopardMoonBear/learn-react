@@ -27,6 +27,7 @@ const Square = styled.div`
   font-weight: 400;
   float: left;
   text-align: center;
+  color: black;
 `;
 
 // props 값 이용하는 건 아직 안 되네. 값 넘어오는 순서 때문인가
