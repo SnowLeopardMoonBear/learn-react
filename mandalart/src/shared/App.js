@@ -18,8 +18,7 @@ class App extends Component {
         {/* render() 함수를 사용하는게 props의 불필요한 렌더링을 막아주는 효율적인 방식. */}
         <Route exact path="/" render={()=><MandalartPage content={this.props}/>}/> 
         <Route path="/nine" component={NineSquaresPage} />
-        <Route path="/square" component={SquarePage} />
-        <Route path="/edit/:index=0" component={EditPage} />
+        <Route path="/square/:id" component={SquarePage} />
       </Wrapper>
     );
   }

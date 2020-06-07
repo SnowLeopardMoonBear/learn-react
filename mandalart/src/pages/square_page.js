@@ -1,19 +1,20 @@
 import React from "react";
-class SquarePage extends React.Component {
-  static defaultProps = {
-    name: "기본props",
+import { Link } from "react-router-dom";
+
+const SquarePage = ({ match }) => {
+  const send = () => {
+    alert("전송합니다");
   };
-  render() {
-    return (
-      <div class="square-id">
-        <h1>Hi, I'm square page!</h1>
-        <h2>square name</h2>
-        <li>
-          <ul>list item to do</ul>
-          <ul>multiple to-do items</ul>
-        </li>
-      </div>
-    );
-  }
-}
+
+  return (
+    <div className="square-id">
+      <h1> {match.params.id} </h1>
+      <input type="text" placeholder="만다라트 내용을 입력해주세요"></input>
+      <Link to="/">
+        <button onClick={send}>전송</button>
+      </Link>
+    </div>
+  );
+};
+
 export default SquarePage;
