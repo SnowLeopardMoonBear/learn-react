@@ -14,9 +14,13 @@ const initialState = {
 const update = (state = initialState, action) => {
     switch(action.type){
         case UPDATE:
+            var newContent = []
+            for (var i=0;i<81;i++){
+                i === action.index ? newContent.push(action.newSquare) : newContent.push(state.content[i]);
+            }
             // Object.assign() 메서드로 객체 안의 내용을 덮어쓰기
             return Object.assign({}, state, {
-                content: action.content
+                content: newContent
             });
         default: 
             return state;

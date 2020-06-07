@@ -12,6 +12,12 @@
 const number = {match.params.number}
 ```
 
+```class
+//클래스 안에서는 match객체가 props에 저장된다. 따라서 호출할 때 {this.props.match.params.(변수명)}으로 접근해야
+```
+
+
+
 ### 3. 링크된 페이지에서 쓸 값을 url을 통해 {location} 객체로 넘겨줘도 된다.
 
 ```use props
