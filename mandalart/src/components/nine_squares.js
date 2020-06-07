@@ -51,15 +51,15 @@ class NineSquares extends React.Component {
     return (
       <div>
         <Wrapper>
-          <Link to={'/square/'+(this.props.index*9+0)}><Square>{this.props.content[`${(this.props.index)*9+0}`]}</Square></Link>
-          <Link to={'/square/'+(this.props.index*9+1)}><Square>{this.props.content[`${(this.props.index)*9+1}`]}</Square></Link>
-          <Link to={'/square/'+(this.props.index*9+2)}><Square>{this.props.content[`${(this.props.index)*9+2}`]}</Square></Link>
-          <Link to={'/square/'+(this.props.index*9+3)}><Square>{this.props.content[`${(this.props.index)*9+3}`]}</Square></Link>
-          <Link to={'/square/'+(this.props.index*9+4)}><Center>{this.props.content[`${(this.props.index)*9+4}`]}</Center></Link>
-          <Link to={'/square/'+(this.props.index*9+5)}><Square>{this.props.content[`${(this.props.index)*9+5}`]}</Square></Link>
-          <Link to={'/square/'+(this.props.index*9+6)}><Square>{this.props.content[`${(this.props.index)*9+6}`]}</Square></Link>
-          <Link to={'/square/'+(this.props.index*9+7)}><Square>{this.props.content[`${(this.props.index)*9+7}`]}</Square></Link>
-          <Link to={'/square/'+(this.props.index*9+8)}><Square>{this.props.content[`${(this.props.index)*9+8}`]}</Square></Link>
+          <Link to={'/square/'+(this.props.index*9+0)+'/'+(this.props.content[`${(this.props.index)*9+0}`])}><Square>{this.props.content[`${(this.props.index)*9+0}`]}</Square></Link>
+          <Link to={'/square/'+(this.props.index*9+1)+'/'+(this.props.content[`${(this.props.index)*9+1}`])}><Square>{this.props.content[`${(this.props.index)*9+1}`]}</Square></Link>
+          <Link to={'/square/'+(this.props.index*9+2)+'/'+(this.props.content[`${(this.props.index)*9+2}`])}><Square>{this.props.content[`${(this.props.index)*9+2}`]}</Square></Link>
+          <Link to={'/square/'+(this.props.index*9+3)+'/'+(this.props.content[`${(this.props.index)*9+3}`])}><Square>{this.props.content[`${(this.props.index)*9+3}`]}</Square></Link>
+          <Link to={'/square/'+(this.props.index*9+4)+'/'+(this.props.content[`${(this.props.index)*9+4}`])}><Square>{this.props.content[`${(this.props.index)*9+4}`]}</Square></Link>
+          <Link to={'/square/'+(this.props.index*9+5)+'/'+(this.props.content[`${(this.props.index)*9+5}`])}><Square>{this.props.content[`${(this.props.index)*9+5}`]}</Square></Link>
+          <Link to={'/square/'+(this.props.index*9+6)+'/'+(this.props.content[`${(this.props.index)*9+6}`])}><Square>{this.props.content[`${(this.props.index)*9+6}`]}</Square></Link>
+          <Link to={'/square/'+(this.props.index*9+7)+'/'+(this.props.content[`${(this.props.index)*9+7}`])}><Square>{this.props.content[`${(this.props.index)*9+7}`]}</Square></Link>
+          <Link to={'/square/'+(this.props.index*9+8)+'/'+(this.props.content[`${(this.props.index)*9+8}`])}><Square>{this.props.content[`${(this.props.index)*9+8}`]}</Square></Link>
         </Wrapper>
       </div>
     );
