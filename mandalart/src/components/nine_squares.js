@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -50,15 +51,15 @@ class NineSquares extends React.Component {
     return (
       <div>
         <Wrapper>
-          <Square>{this.props.content[`${(this.props.index)*9+0}`]}</Square>
-          <Square>{this.props.content[`${(this.props.index)*9+1}`]}</Square>
-          <Square>{this.props.content[`${(this.props.index)*9+2}`]}</Square>
-          <Square>{this.props.content[`${(this.props.index)*9+3}`]}</Square>
-          <Center>{this.props.content[`${(this.props.index)*9+4}`]}</Center>
-          <Square>{this.props.content[`${(this.props.index)*9+5}`]}</Square>
-          <Square>{this.props.content[`${(this.props.index)*9+6}`]}</Square>
-          <Square>{this.props.content[`${(this.props.index)*9+7}`]}</Square>
-          <Square>{this.props.content[`${(this.props.index)*9+8}`]}</Square>
+          <Link to={'/square/'+(this.props.index*9+0)}><Square>{this.props.content[`${(this.props.index)*9+0}`]}</Square></Link>
+          <Link to={'/square/'+(this.props.index*9+1)}><Square>{this.props.content[`${(this.props.index)*9+1}`]}</Square></Link>
+          <Link to={'/square/'+(this.props.index*9+2)}><Square>{this.props.content[`${(this.props.index)*9+2}`]}</Square></Link>
+          <Link to={'/square/'+(this.props.index*9+3)}><Square>{this.props.content[`${(this.props.index)*9+3}`]}</Square></Link>
+          <Link to={'/square/'+(this.props.index*9+4)}><Center>{this.props.content[`${(this.props.index)*9+4}`]}</Center></Link>
+          <Link to={'/square/'+(this.props.index*9+5)}><Square>{this.props.content[`${(this.props.index)*9+5}`]}</Square></Link>
+          <Link to={'/square/'+(this.props.index*9+6)}><Square>{this.props.content[`${(this.props.index)*9+6}`]}</Square></Link>
+          <Link to={'/square/'+(this.props.index*9+7)}><Square>{this.props.content[`${(this.props.index)*9+7}`]}</Square></Link>
+          <Link to={'/square/'+(this.props.index*9+8)}><Square>{this.props.content[`${(this.props.index)*9+8}`]}</Square></Link>
         </Wrapper>
       </div>
     );
