@@ -1,29 +1,25 @@
-import { UPDATE } from '../actions';
+import { UPDATE } from "../actions";
 
 const initialState = {
-    content:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 
-    11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 
-    21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 
-    31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 
-    '안녕', 42, 43, 44, 45, 46, 47, 48, 49, 50, 
-    51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 
-    61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
-    71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81]
-    }
+  content: localStorage.Mandalart.split(","), // 초기값을 로컬스토리지에서 불러옴
+};
 
 const update = (state = initialState, action) => {
-    switch(action.type){
-        case UPDATE:
-            var newContent = []
-            for (var i=0;i<81;i++){
-                i === action.index ? newContent.push(action.newSquare) : newContent.push(state.content[i]);
-            }
-            // Object.assign() 메서드로 객체 안의 내용을 덮어쓰기
-            return Object.assign({}, state, {
-                content: newContent
-            });
-        default: 
-            return state;
-    };
-}
+  switch (action.type) {
+    case UPDATE:
+      var newContent = [];
+      for (var i = 0; i < 81; i++) {
+        i === action.index
+          ? newContent.push(action.newSquare)
+          : newContent.push(state.content[i]);
+      }
+      localStorage.Mandalart = newContent; // 업데이트시 새로운 내용을 로컬스토리지에 저장
+      // Object.assign() 메서드로 객체 안의 내용을 덮어쓰기
+      return Object.assign({}, state, {
+        content: newContent,
+      });
+    default:
+      return state;
+  }
+};
 export default update;

@@ -11,9 +11,9 @@ class SquareContent extends React.Component {
   handleChange = (e) => {
     this.setState({inputText: e.target.value}) // 이벤트를 유발한 element의 주소에 접근해 내부 값을 받아와 state를 업데이트.
   }
+  // 수정 버튼 클릭시 발동하는 함수
   dispatchUpdate = () => {
     this.props.send(parseInt(this.props.match.params.index), this.state.inputText);
-    console.log(this.props.match.params.index, this.state.inputText)
   }
 
   render() {
