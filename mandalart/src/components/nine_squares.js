@@ -24,7 +24,7 @@ const Square = styled.div`
   overflow:hidden;
   width: 80px;
   height: 80px;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 400;
   float: left;
   text-align: center;
@@ -38,9 +38,12 @@ const Center = styled.div`
   border: 2px;
   border-color: #ff69b4;
   border-style: solid;
+  display: block;
+  word-break: break-word;
+  overflow: hidden;
   width: 80px;
   height: 80px;
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 700;
   float: left;
   text-align: center;
