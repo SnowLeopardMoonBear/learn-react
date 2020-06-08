@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { RouteComponentProps } from 'react-router';
 import { Route } from "react-router-dom";
-import { MandalartPage, NineSquaresPage, SquarePage, EditPage } from "../pages";
+import { MandalartPage, NineSquaresPage, SquarePage} from "../pages";
 import Styled from "styled-components";
 
 
