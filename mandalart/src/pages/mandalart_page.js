@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { reset } from "../actions"
 import NineSquares from "../components/nine_squares"
+import CenterSquares from "../components/center_squares.js"
 import Styled from "styled-components"
 
 const Wrapper = Styled.div`
@@ -18,7 +19,7 @@ const Reset =  Styled.div`
   font-size:1.5rem;
   z-index: 6;
   width: 88px;
-  background-color:#ee0000;
+  background-color:#ee4444;
   color:white;
   text-align:center;
   font-family: 돋움, Helvetica;
@@ -39,7 +40,7 @@ class MandalartPage extends React.Component {
         <NineSquares content={this.props.content} index={1}></NineSquares>
         <NineSquares content={this.props.content} index={2}></NineSquares>
         <NineSquares content={this.props.content} index={3}></NineSquares>
-        <NineSquares content={this.props.content} index={4}></NineSquares>
+        <CenterSquares content={this.props.content} index={4}></CenterSquares>
         <NineSquares content={this.props.content} index={5}></NineSquares>
         <NineSquares content={this.props.content} index={6}></NineSquares>
         <NineSquares content={this.props.content} index={7}></NineSquares>

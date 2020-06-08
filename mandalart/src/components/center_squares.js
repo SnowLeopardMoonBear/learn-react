@@ -25,11 +25,12 @@ const Square = styled.div`
   overflow:hidden;
   width: 80px;
   height: 80px;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 400;
   float: left;
   text-align: center;
-  color: #222222;
+  color: white;
+  background-color: #ffb3d4;
 `;
 
 // props 값 이용하는 건 아직 안 되네. 값 넘어오는 순서 때문인가
@@ -44,14 +45,14 @@ const Center = styled.div`
   overflow: hidden;
   width: 80px;
   height: 80px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 700;
   float: left;
   text-align: center;
-  background-color: #ffb3d4;
+  background-color: #fd8bc4;
   color: aliceblue;
 `;
-class NineSquares extends React.Component {
+class CenterSquares extends React.Component {
   
   render() {
     return (
@@ -71,4 +72,4 @@ class NineSquares extends React.Component {
     );
   }
 }
-export default NineSquares;
+export default CenterSquares;
