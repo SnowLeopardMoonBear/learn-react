@@ -27,10 +27,7 @@ class SquareContent extends React.Component {
           placeholder={this.props.match.params.content}
           onChange={this.handleChange}
         ></input>
-        <h1>{this.state.inputText}</h1>
-        <button onClick={this.dispatchUpdate}>전송</button>
-        <Link to="/"><span>홈으로</span></Link>
-        <p>{this.props.content}</p>
+        <Link to="/"><button onClick={this.dispatchUpdate}>전송</button></Link>
       </div>
     );
   }
