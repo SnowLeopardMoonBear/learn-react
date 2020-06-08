@@ -6,14 +6,24 @@ import Styled from "styled-components"
 
 const Wrapper = Styled.div`
   width: 768px;
+  margin-left:auto;
+  margin-right:auto;
 `
 const Title = Styled.h1`
   text-align:center;
 `
-const Reset =  Styled.h5`
+const Reset =  Styled.div`
+  position: relative;
+  border-radius:3px;
   font-size:1.5rem;
-  color:black;
+  z-index: 6;
+  width: 88px;
+  background-color:#ee0000;
+  color:white;
   text-align:center;
+  font-family: 돋움, Helvetica;
+  margin-left: auto;
+  margin-bottom: 20px
 `
 
 class MandalartPage extends React.Component {
@@ -24,6 +34,7 @@ class MandalartPage extends React.Component {
     return (
       <Wrapper>
         <Title>My Mandalart</Title>
+        <Reset onClick={this.dispatchReset}>리셋</Reset>
         <NineSquares content={this.props.content} index={0}></NineSquares>
         <NineSquares content={this.props.content} index={1}></NineSquares>
         <NineSquares content={this.props.content} index={2}></NineSquares>
@@ -33,7 +44,6 @@ class MandalartPage extends React.Component {
         <NineSquares content={this.props.content} index={6}></NineSquares>
         <NineSquares content={this.props.content} index={7}></NineSquares>
         <NineSquares content={this.props.content} index={8}></NineSquares>
-        <Reset onClick={this.dispatchReset}>리셋</Reset>
       </Wrapper>
     );
   }

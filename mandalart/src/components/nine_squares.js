@@ -16,6 +16,7 @@ const Wrapper = styled.div`
 const Square = styled.div`
   margin-left: auto;
   margin-right: auto;
+  background-color: #fffcff;
   border: 2px;
   display: block;
   border-color: #ff69b4;
@@ -28,7 +29,7 @@ const Square = styled.div`
   font-weight: 400;
   float: left;
   text-align: center;
-  color: black;
+  color: #222222;
 `;
 
 // props 값 이용하는 건 아직 안 되네. 값 넘어오는 순서 때문인가
