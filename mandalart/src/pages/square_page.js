@@ -15,10 +15,16 @@ class SquareContent extends React.Component {
   dispatchUpdate = () => {
     this.props.send(parseInt(this.props.match.params.index), this.state.inputText);
   }
+  enterKey = (e) => {
+    if (e.key==='Enter'){
+      this.dispatchUpdate()
+      alert("값이 변경되었습니다")
+    }
+  }
 
   render() {
     return (
-      <div className="square-id">
+      <div onKeyUp={this.enterKey}>
         <h1>스퀘어 수정하기</h1>
         <h1> {this.props.match.params.content} </h1>
         <input

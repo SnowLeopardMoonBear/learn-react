@@ -7,8 +7,6 @@ const Wrapper = styled.div`
   margin-right: auto;
   width: 252px;
   height: 252px;
-  display: table-cell;
-  vertical-align: middle;
   float: left;
   border: 2px;
   border-color: #ff69b4;
@@ -19,8 +17,11 @@ const Square = styled.div`
   margin-left: auto;
   margin-right: auto;
   border: 2px;
+  display: block;
   border-color: #ff69b4;
   border-style: solid;
+  word-break:break-all;
+  overflow:hidden;
   width: 80px;
   height: 80px;
   font-size: 1.5rem;
