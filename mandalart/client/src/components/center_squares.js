@@ -28,7 +28,7 @@ const Square = styled.div`
   width: 80px;
   height: 80px;
   font-size: 1.1rem;
-  font-weight: 400;
+  font-weight: 700;
   float: left;
   color: white;
   &:hover{
@@ -52,7 +52,7 @@ const Center = styled.div`
   width: 80px;
   height: 80px;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 900;
   float: left;
   background-color: #fd8bc4;
   color: aliceblue;
