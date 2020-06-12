@@ -18,7 +18,9 @@ const Square = styled.div`
   margin-right: auto;
   background-color: #fffcff;
   border: 2px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-color: #ff69b4;
   border-style: solid;
   word-break:break-all;
@@ -40,7 +42,9 @@ const Center = styled.div`
   border: 2px;
   border-color: #ff69b4;
   border-style: solid;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   word-break: break-word;
   overflow: hidden;
   width: 80px;
