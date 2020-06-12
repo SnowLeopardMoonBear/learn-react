@@ -10,7 +10,7 @@ const Wrapper = Styled.div`
   width: 768px;
   margin:auto;
   text-align: center;
-  background-color: #fff0ff;
+  background: linear-gradient( 30deg, #ffd0ff, #fff0ff );
 `
 const Title = Styled.h1`
   color: #333333;
