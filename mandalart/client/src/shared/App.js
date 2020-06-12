@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import { MandalartPage, NineSquaresPage, SquarePage} from "../pages";
+import { MandalartPage, NineSquaresPage, SquarePage, LoginPage} from "../pages";
 import Styled from "styled-components";
 
 
@@ -18,6 +18,7 @@ class App extends Component {
         <Route exact path="/" render={()=><MandalartPage content={this.props}/>}/> 
         <Route path="/nine" component={NineSquaresPage} />
         <Route path="/square/:index/:content" component={SquarePage} />
+        <Route path="/login" component={LoginPage}/>
       </Wrapper>
     );
   }
