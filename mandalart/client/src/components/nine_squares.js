@@ -27,7 +27,7 @@ const Square = styled.div`
   overflow:hidden;
   width: 80px;
   height: 80px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   float: left;
   color: #444444;
@@ -51,7 +51,7 @@ const Center = styled.div`
   overflow: hidden;
   width: 80px;
   height: 80px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   float: left;
   background-color: ${props => (`#${(props.index+7).toString(16)}f69b4`)};

@@ -27,7 +27,7 @@ const Square = styled.div`
   overflow:hidden;
   width: 80px;
   height: 80px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   float: left;
   color: white;
