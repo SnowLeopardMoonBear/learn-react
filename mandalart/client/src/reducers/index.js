@@ -16,12 +16,14 @@ const initialState = {
 const manStore = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE:
+      // action.newSquare는 새로 입력한 값, action.index는 변경할 스퀘어의 인덱스
       var newContent = [];
       for (var i = 0; i < 81; i++) {
         i === action.index
           ? newContent.push(action.newSquare)
           : newContent.push(state.content[i]);
       }
+      // 중앙 3x3 스퀘어의 카테고리명과, 각 3x3 스퀘어의 카테고리명이 연동되도록 로직을 추가
       if (action.index % 9 === 4){
         newContent[(36+parseInt(action.index/9))] = action.newSquare;
       }
