@@ -22,6 +22,12 @@ const manStore = (state = initialState, action) => {
           ? newContent.push(action.newSquare)
           : newContent.push(state.content[i]);
       }
+      if (action.index % 9 === 4){
+        newContent[(36+parseInt(action.index/9))] = action.newSquare;
+      }
+      if (action.index >=36 && action.index <=44){
+        newContent[(4+9*(action.index-36))] = action.newSquare;
+      }
       localStorage.Mandalart = newContent; // 업데이트시 새로운 내용을 로컬스토리지에 저장
       // Object.assign() 메서드로 객체 안의 내용을 덮어쓰기
       return Object.assign({}, state, {
