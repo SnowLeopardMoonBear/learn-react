@@ -48,7 +48,7 @@ const Send = styled.button`
 `
 
 class SquareContent extends React.Component {
-  state = { inputText: this.props.match.params.content };
+  state = { inputText: this.props.match.params.content};
 
   // input 안의 값이 바뀔 때마다 발동되는 함수로, state의 inputText에 저장해준다.
   handleChange = (e) => {
@@ -64,8 +64,13 @@ class SquareContent extends React.Component {
   };
   enterKey = (e) => {
     if (e.key === "Enter") {
-      this.dispatchUpdate();
-      alert("값이 변경되었습니다");
+      if(this.state.inputText != ""){
+        this.dispatchUpdate();
+        alert("저장했습니다");
+      }
+      else{
+        alert("스퀘어에 들어갈 내용을 입력해주세요")
+      }
     }
   };
 
@@ -76,6 +81,7 @@ class SquareContent extends React.Component {
         <Square>{this.state.inputText} </Square>
         <Edit>
           <Input
+            autofocus
             type="text"
             placeholder={this.props.match.params.content}
             onChange={this.handleChange}
