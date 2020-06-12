@@ -31,6 +31,7 @@ const Square = styled.div`
   font-weight: 400;
   float: left;
   color: #222222;
+  attr
 `;
 
 // props 값 이용하는 건 아직 안 되네. 값 넘어오는 순서 때문인가
@@ -50,7 +51,7 @@ const Center = styled.div`
   font-size: 1.3rem;
   font-weight: 700;
   float: left;
-  background-color: #ffb3d4;
+  background-color: ${props => (`#${(props.index+6).toString(16)}f69b4`)};
   color: aliceblue;
 `;
 class NineSquares extends React.Component {
@@ -63,7 +64,7 @@ class NineSquares extends React.Component {
           <Link to={'/square/'+(this.props.index*9+1)+'/'+(this.props.content[`${(this.props.index)*9+1}`])}><Square>{this.props.content[`${(this.props.index)*9+1}`]}</Square></Link>
           <Link to={'/square/'+(this.props.index*9+2)+'/'+(this.props.content[`${(this.props.index)*9+2}`])}><Square>{this.props.content[`${(this.props.index)*9+2}`]}</Square></Link>
           <Link to={'/square/'+(this.props.index*9+3)+'/'+(this.props.content[`${(this.props.index)*9+3}`])}><Square>{this.props.content[`${(this.props.index)*9+3}`]}</Square></Link>
-          <Link to={'/square/'+(this.props.index*9+4)+'/'+(this.props.content[`${(this.props.index)*9+4}`])}><Center>{this.props.content[`${(this.props.index)*9+4}`]}</Center></Link>
+          <Link to={'/square/'+(this.props.index*9+4)+'/'+(this.props.content[`${(this.props.index)*9+4}`])}><Center index={(this.props.index)}>{this.props.content[`${(this.props.index)*9+4}`]}</Center></Link>
           <Link to={'/square/'+(this.props.index*9+5)+'/'+(this.props.content[`${(this.props.index)*9+5}`])}><Square>{this.props.content[`${(this.props.index)*9+5}`]}</Square></Link>
           <Link to={'/square/'+(this.props.index*9+6)+'/'+(this.props.content[`${(this.props.index)*9+6}`])}><Square>{this.props.content[`${(this.props.index)*9+6}`]}</Square></Link>
           <Link to={'/square/'+(this.props.index*9+7)+'/'+(this.props.content[`${(this.props.index)*9+7}`])}><Square>{this.props.content[`${(this.props.index)*9+7}`]}</Square></Link>

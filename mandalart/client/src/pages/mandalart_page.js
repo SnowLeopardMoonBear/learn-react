@@ -6,6 +6,7 @@ import CenterSquares from "../components/center_squares.js"
 import Styled from "styled-components"
 
 const Wrapper = Styled.div`
+  display: relative;
   width: 768px;
   margin-left:auto;
   margin-right:auto;
@@ -18,7 +19,7 @@ const Title = Styled.h1`
 `
 const Reset =  Styled.div`
   position: absolute;
-  right:-100px;
+  right:100px;
   top: 12px;
   display: inline-block;
   border-radius:3px;
