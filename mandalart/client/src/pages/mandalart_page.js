@@ -8,8 +8,7 @@ import Styled from "styled-components"
 const Wrapper = Styled.div`
   display: relative;
   width: 768px;
-  margin-left:auto;
-  margin-right:auto;
+  margin:auto;
   text-align: center;
   background-color: #fff0ff;
 `
@@ -20,13 +19,13 @@ const Title = Styled.h1`
 `
 const Reset =  Styled.div`
   position: absolute;
-  right:100px;
+  right: calc((100% - 760px) / 2);
   top: 16px;
   display: inline-block;
   border-radius:3px;
   font-size:1.3rem;
   z-index: 6;
-  width: 88px;
+  width: 80px;
   
   background-color:#ff5050;
   color:white;
