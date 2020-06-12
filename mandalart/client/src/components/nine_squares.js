@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   height: 252px;
   float: left;
   border: 2px;
-  border-color: #ff69b4;
+  border-color: #ee77c0;
   border-style: solid;
 `;
 
@@ -21,9 +21,9 @@ const Square = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-color: #ff69b4;
+  border-color: #ee77c0;
   border-style: solid;
-  word-break:break-all;
+  word-break:keep-all;
   overflow:hidden;
   width: 80px;
   height: 80px;
@@ -42,12 +42,12 @@ const Center = styled.div`
   margin-left: auto;
   margin-right: auto;
   border: 2px;
-  border-color: #ff69b4;
+  border-color: #ee77c0;
   border-style: solid;
   display: flex;
   align-items: center;
   justify-content: center;
-  word-break: break-word;
+  word-break: keep-all;
   overflow: hidden;
   width: 80px;
   height: 80px;

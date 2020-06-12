@@ -10,10 +10,10 @@ const Wrapper = Styled.div`
   width: 768px;
   margin:auto;
   text-align: center;
-  background: linear-gradient( 30deg, #ffd0ff, #fff0ff );
+  background: linear-gradient( 30deg, #cc5fb0, #fd8bc4 );
 `
 const Title = Styled.h1`
-  color: #333333;
+  color: #ffffff;
   text-align:center;
   display:inline-block;
   margin:auto auto 10px 10px;

@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   height: 252px;
   float: left;
   border: 2px;
-  border-color: #fd8bc4;
+  border-color: #e05fdd;
   border-style: solid;
 `;
 

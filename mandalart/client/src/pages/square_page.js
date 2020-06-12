@@ -24,7 +24,7 @@ const Square = styled.div`
   justify-content: center;
   border-color: #ff69b4;
   border-style: solid;
-  word-break: break-all;
+  word-break: keep-all;
   overflow: hidden;
   width: 80px;
   height: 80px;
@@ -44,7 +44,7 @@ const Input = styled.input`
   margin-right: auto;
 `
 const Send = styled.button`
-  width: 40px;
+  width: 50px;
 `
 
 class SquareContent extends React.Component {
