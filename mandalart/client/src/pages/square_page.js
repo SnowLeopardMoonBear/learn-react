@@ -30,8 +30,6 @@ const Square = styled.div`
   height: 80px;
   font-size: 1.1rem;
   font-weight: 400;
-  vertical-align:middle;
-  text-align: center;
   color: #222222;
 `;
 const Edit = styled.div`

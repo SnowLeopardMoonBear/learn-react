@@ -30,7 +30,6 @@ const Square = styled.div`
   font-size: 1.3rem;
   font-weight: 400;
   float: left;
-  text-align: center;
   color: white;
   background-color: #ffb3d4;
 `;
@@ -52,7 +51,6 @@ const Center = styled.div`
   font-size: 1.5rem;
   font-weight: 700;
   float: left;
-  text-align: center;
   background-color: #fd8bc4;
   color: aliceblue;
 `;
