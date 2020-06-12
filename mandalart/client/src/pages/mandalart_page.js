@@ -26,16 +26,15 @@ const Reset =  Styled.div`
   font-size:1.3rem;
   z-index: 6;
   width: 80px;
-  
   background-color:#ff5050;
   color:white;
   text-align:center;
   font-family: 돋움, Helvetica;
   margin-left: auto;
-  margin-bottom: 20px
-  
-  &:hover {
-    background-color: white;
+  margin-bottom: 20px;
+  &:hover{
+    background-color: #ff2222;
+    cursor: pointer;
   }
 `
 

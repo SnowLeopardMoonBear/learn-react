@@ -31,7 +31,10 @@ const Square = styled.div`
   font-weight: 400;
   float: left;
   color: #222222;
-  attr
+  &:hover{
+    color: aliceblue;
+    background-color: #eeaaee;
+  }
 `;
 
 // props 값 이용하는 건 아직 안 되네. 값 넘어오는 순서 때문인가
@@ -53,6 +56,10 @@ const Center = styled.div`
   float: left;
   background-color: ${props => (`#${(props.index+6).toString(16)}f69b4`)};
   color: aliceblue;
+  &:hover{
+    color: aliceblue;
+    background-color: #eeaaee;
+  }
 `;
 class NineSquares extends React.Component {
   
