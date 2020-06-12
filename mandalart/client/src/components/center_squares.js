@@ -23,11 +23,11 @@ const Square = styled.div`
   justify-content: center;
   border-color: white;
   border-style: solid;
-  word-break:break-all;
+  word-break:keep-all;
   overflow:hidden;
   width: 80px;
   height: 80px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 400;
   float: left;
   color: white;
@@ -43,11 +43,11 @@ const Center = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  word-break: break-word;
+  word-break: keep-all;
   overflow: hidden;
   width: 80px;
   height: 80px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   float: left;
   background-color: #fd8bc4;

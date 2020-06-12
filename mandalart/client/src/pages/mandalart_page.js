@@ -11,6 +11,7 @@ const Wrapper = Styled.div`
   margin-left:auto;
   margin-right:auto;
   text-align: center;
+  background-color: #fff0ff;
 `
 const Title = Styled.h1`
   text-align:center;
@@ -20,19 +21,23 @@ const Title = Styled.h1`
 const Reset =  Styled.div`
   position: absolute;
   right:100px;
-  top: 12px;
+  top: 16px;
   display: inline-block;
   border-radius:3px;
-  font-size:1.5rem;
+  font-size:1.3rem;
   z-index: 6;
   width: 88px;
   
-  background-color:#ee4444;
+  background-color:#ff5050;
   color:white;
   text-align:center;
   font-family: 돋움, Helvetica;
   margin-left: auto;
   margin-bottom: 20px
+  
+  &:hover {
+    background-color: white;
+  }
 `
 
 class MandalartPage extends React.Component {
