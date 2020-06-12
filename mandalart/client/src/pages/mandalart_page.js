@@ -13,6 +13,7 @@ const Wrapper = Styled.div`
   background-color: #fff0ff;
 `
 const Title = Styled.h1`
+  color: #333333;
   text-align:center;
   display:inline-block;
   margin:auto auto 10px 10px;
