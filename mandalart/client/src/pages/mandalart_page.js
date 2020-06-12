@@ -41,7 +41,9 @@ const Reset =  Styled.div`
 
 class MandalartPage extends React.Component {
   dispatchReset = () => {
-    this.props.clear();
+    if (window.confirm("만다라트를 모두 지웁니다. 정말 삭제하시겠어요?")){
+      this.props.clear();
+    }
   }
   render() {
     return (

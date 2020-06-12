@@ -64,7 +64,7 @@ class SquareContent extends React.Component {
   };
   enterKey = (e) => {
     if (e.key === "Enter") {
-      if(this.state.inputText != ""){
+      if(this.state.inputText !== ""){
         this.dispatchUpdate();
         alert("저장했습니다");
       }
