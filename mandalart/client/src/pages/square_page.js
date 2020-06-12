@@ -63,7 +63,10 @@ const Send = styled.div`
 
 class SquareContent extends React.Component {
   state = { inputText: this.props.match.params.content};
-
+  input = null;
+  componentDidMount(){
+    this.input.focus();
+  }
   // input 안의 값이 바뀔 때마다 발동되는 함수로, state의 inputText에 저장해준다.
   handleChange = (e) => {
     this.setState({ inputText: e.target.value }); // 이벤트를 유발한 element의 주소에 접근해 내부 값을 받아와 state를 업데이트.
@@ -95,6 +98,9 @@ class SquareContent extends React.Component {
         <Square>{this.state.inputText} </Square>
         <Edit>
           <Input
+            ref={ref => {
+              this.input = ref;
+            }}
             autofocus
             type="text"
             placeholder={this.props.match.params.content}
