@@ -9,16 +9,23 @@ const Wrapper = Styled.div`
   width: 768px;
   margin-left:auto;
   margin-right:auto;
+  text-align: center;
 `
 const Title = Styled.h1`
   text-align:center;
+  display:inline-block;
+  margin:auto auto 10px 10px;
 `
 const Reset =  Styled.div`
-  position: relative;
+  position: absolute;
+  right:-100px;
+  top: 12px;
+  display: inline-block;
   border-radius:3px;
   font-size:1.5rem;
   z-index: 6;
   width: 88px;
+  
   background-color:#ee4444;
   color:white;
   text-align:center;
