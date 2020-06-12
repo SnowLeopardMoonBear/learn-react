@@ -10,14 +10,18 @@ const Title = styled.h1`
 const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
-  background-color: #fff7ff;
+  background-color: #fffaff;
+  padding: 10px;
+  height: 100vh;
 `;
 const Square = styled.div`
   margin-left: auto;
   margin-right: auto;
   background-color: #fffcff;
   border: 2px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-color: #ff69b4;
   border-style: solid;
   word-break: break-all;
@@ -26,18 +30,27 @@ const Square = styled.div`
   height: 80px;
   font-size: 1.1rem;
   font-weight: 400;
+  vertical-align:middle;
   text-align: center;
   color: #222222;
 `;
 const Edit = styled.div`
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  width:190px;
+  margin-bottom: 20px;
 `;
+const Input = styled.input`
+  margin-left: auto;
+  margin-right: auto;
+`
+const Send = styled.button`
+  width: 40px;
+`
 
 class SquareContent extends React.Component {
-  state = { inputText: "default" };
+  state = { inputText: this.props.match.params.content };
 
   // input 안의 값이 바뀔 때마다 발동되는 함수로, state의 inputText에 저장해준다.
   handleChange = (e) => {
@@ -62,14 +75,15 @@ class SquareContent extends React.Component {
     return (
       <Wrapper onKeyUp={this.enterKey}>
         <Title>스퀘어 수정하기</Title>
-        <Square> {this.props.match.params.content} </Square>
+        <Square>{this.state.inputText} </Square>
         <Edit>
-          <input
+          <Input
             type="text"
             placeholder={this.props.match.params.content}
             onChange={this.handleChange}
-          ></input>
-          <button onClick={this.dispatchUpdate}>전송</button>
+          ></Input>
+          
+        <Send onClick={this.dispatchUpdate}>전송</Send>
         </Edit>
       </Wrapper>
     );
