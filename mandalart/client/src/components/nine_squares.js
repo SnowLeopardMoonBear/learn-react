@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   height: 252px;
   float: left;
   border: 2px;
-  border-color: #ee77c0;
+  border-color: #ee80bf;
   border-style: solid;
 `;
 
@@ -21,7 +21,7 @@ const Square = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-color: #ee77c0;
+  border-color: #ee80bf;
   border-style: solid;
   word-break:keep-all;
   overflow:hidden;
@@ -30,10 +30,10 @@ const Square = styled.div`
   font-size: 1rem;
   font-weight: 400;
   float: left;
-  color: #222222;
+  color: #444444;
   &:hover{
-    color: aliceblue;
-    background-color: ${props => (`#${(props.index+7).toString(16)}faaee`)};
+    color: #fafaff;
+    background-color: ${props => (`#f${Math.round(1.8*props.index).toString(16)}aaee`)};
   }
 `;
 
@@ -42,7 +42,7 @@ const Center = styled.div`
   margin-left: auto;
   margin-right: auto;
   border: 2px;
-  border-color: #ee77c0;
+  border-color: #ee80bf;
   border-style: solid;
   display: flex;
   align-items: center;
@@ -54,10 +54,10 @@ const Center = styled.div`
   font-size: 1.1rem;
   font-weight: 700;
   float: left;
-  background-color: ${props => (`#${(props.index+6).toString(16)}f69b4`)};
-  color: aliceblue;
+  background-color: ${props => (`#${(props.index+7).toString(16)}f69b4`)};
+  color: #fafaff;
   &:hover{
-    color: aliceblue;
+    color: #fafaff;
     background-color: #eeaaee;
   }
 `;

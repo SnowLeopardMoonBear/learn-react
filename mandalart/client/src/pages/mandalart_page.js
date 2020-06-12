@@ -10,10 +10,10 @@ const Wrapper = Styled.div`
   width: 768px;
   margin:auto;
   text-align: center;
-  background: linear-gradient( 30deg, #cc5fb0, #fd8bc4 );
+  background: linear-gradient( 30deg, #cc6bb0, #fd9bc4 );
 `
 const Title = Styled.h1`
-  color: #ffffff;
+  color: #fafaff;
   text-align:center;
   display:inline-block;
   margin:auto auto 10px 10px;
@@ -27,14 +27,14 @@ const Reset =  Styled.div`
   font-size:1.3rem;
   z-index: 6;
   width: 80px;
-  background-color:#ff5050;
+  background-color:#ff6044;
   color:white;
   text-align:center;
   font-family: 돋움, Helvetica;
   margin-left: auto;
   margin-bottom: 20px;
   &:hover{
-    background-color: #ff2222;
+    background-color: #ff3022;
     cursor: pointer;
   }
 `

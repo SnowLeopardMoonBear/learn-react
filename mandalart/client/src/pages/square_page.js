@@ -11,18 +11,19 @@ const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   background-color: #fffaff;
+  color: #333333;
   padding: 10px;
   height: 100vh;
 `;
 const Square = styled.div`
   margin-left: auto;
   margin-right: auto;
-  background-color: #fffcff;
+  background-color: #fffdff;
   border: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-color: #ff69b4;
+  border-color: #ff70bb;
   border-style: solid;
   word-break: keep-all;
   overflow: hidden;
@@ -38,13 +39,26 @@ const Edit = styled.div`
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  vertical-align: middle;
 `;
 const Input = styled.input`
   margin-left: auto;
   margin-right: auto;
 `
-const Send = styled.button`
-  width: 50px;
+const Send = styled.div`
+  display: inline-block;
+  margin:5px;
+  color: #555555;
+  border-style: 2px solid #000000;
+  padding: 1px 5px 1px 5px;
+  border-radius: 2px;
+  font-family: "Helvetica";
+  background-color:#bbddff;
+  &:hover{
+    color: #ffffff;
+    background-color:#55ccff;
+    cursor: pointer;
+  };
 `
 
 class SquareContent extends React.Component {

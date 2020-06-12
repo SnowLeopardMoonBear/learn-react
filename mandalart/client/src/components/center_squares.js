@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 const Square = styled.div`
   margin-left: auto;
   margin-right: auto;
-  background-color: ${props => (`#${(props.index+6).toString(16)}f69b4`)};
+  background-color: ${props => (`#${(props.index+7).toString(16)}f69b4`)};
   border: 2px;
   display: flex;
   align-items: center;
