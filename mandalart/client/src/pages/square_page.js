@@ -14,6 +14,7 @@ const Wrapper = styled.div`
   color: #333333;
   padding: 10px;
   height: 100vh;
+  text-align: center;
 `;
 const Square = styled.div`
   margin-left: auto;
@@ -29,7 +30,7 @@ const Square = styled.div`
   overflow: hidden;
   width: 80px;
   height: 80px;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: #222222;
 `;
@@ -48,15 +49,15 @@ const Input = styled.input`
 const Send = styled.div`
   display: inline-block;
   margin:5px;
-  color: #555555;
+  color: #ffffff;
   border-style: 2px solid #000000;
   padding: 1px 5px 1px 5px;
   border-radius: 2px;
   font-family: "Helvetica";
-  background-color:#bbddff;
+  background-color:#ff8fe3;
   &:hover{
     color: #ffffff;
-    background-color:#55ccff;
+    background-color:#ff6bda;
     cursor: pointer;
   };
 `
