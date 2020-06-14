@@ -25,7 +25,10 @@ var corsOptions = {
     origin: 'http://localhost:3000', // 허용되는 Origin
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
+
 app.use(cors(corsOptions));
+app.use(express.json()); // req.body를 읽기 위해 필요. express 내장. 따로 body-parser를 안 써도 됨!
+
 app.get("/", function (req, res) {
   console.log("hi express");
   res.send("<h1>asdf</h1>"); // res.end('(문자열)')라면 그냥 문자열을 res body에 저장하는데 그친다.
@@ -37,7 +40,7 @@ app.get("/data", function (req, res) {
 });
 
 app.post("/data", function (req, res) {
-  console.log(req);
+  console.log(req.body);
 });
 
 var server = app.listen(port, function () {

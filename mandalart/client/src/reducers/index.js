@@ -26,10 +26,11 @@ const manStore = (state = initialState, action) => {
         newContent[(4+9*(action.index-36))] = action.newSquare;
       }
       localStorage.Mandalart = newContent; // 업데이트시 새로운 내용을 로컬스토리지에 저장
-      axios.post('http://localhost:4000/data', {
-        params: {
-          test: "테스트"
-        }
+
+      axios({
+        method: 'post',
+        url: 'http://localhost:4000/data',
+        data: newContent
       })
 
       // Object.assign() 메서드로 객체 안의 내용을 덮어쓰기
