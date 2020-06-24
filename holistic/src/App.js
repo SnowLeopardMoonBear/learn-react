@@ -1,17 +1,17 @@
 import React from 'react';
 import styled from "styled-components";
-import Level2 from './Level2'
+import { Button } from "@material-ui/core";
+import { StylesProvider } from "@material-ui/core";
 
-const Level1 = styled.div`
-  font-size: 50px;
+const ButtonS = styled(Button)`
+  color: blue;
 `
 
 function App() {
   return (
-    <Level1>
-      Level 1 Text
-      <Level2></Level2>
-    </Level1>
+    <StylesProvider injectFirst>
+      <ButtonS>I'm a button</ButtonS>
+    </StylesProvider>
   );
 }
 
