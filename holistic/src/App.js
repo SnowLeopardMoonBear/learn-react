@@ -1,17 +1,22 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
-import { Button } from "@material-ui/core";
-import { StylesProvider } from "@material-ui/core";
+import Communication from "./Communication.js";
 
-const ButtonS = styled(Button)`
-  color: blue;
-`
+const Wrapper = styled.div`
+  max-width: 1024px;
+  background-color: #eeeeee;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 1000px){
+    background-color: #faeeee;
+  }
+`;
 
 function App() {
   return (
-    <StylesProvider injectFirst>
-      <ButtonS>I'm a button</ButtonS>
-    </StylesProvider>
+    <Wrapper>
+        <Communication text="Hi, I'm text!"></Communication>
+    </Wrapper>
   );
 }
 
