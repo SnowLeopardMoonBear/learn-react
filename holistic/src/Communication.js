@@ -14,9 +14,11 @@ function Communication(props) {
   const [poke, setPoke] = useState("데이터 불러오기 전");
   const getPoke = (event)=>{
     event.preventDefault();
-    const bulb = axios.get("https://pokeapi.co/api/v2/pokemon/1");
-    console.log(bulb);
-    setPoke('Get PokeAPI Success');
+    axios.get("https://pokeapi.co/api/v2/pokemon/1")
+      .then((res)=>{
+        console.log(res);
+        setPoke('Get PokeAPI Success');
+      });
   }
   return (
     <div>
