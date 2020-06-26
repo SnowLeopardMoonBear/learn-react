@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 function App() {
   return (
     <Wrapper>
-        <Communication text="Hi, I'm text!"></Communication>
+        <Communication text="Communication Test Component"></Communication>
     </Wrapper>
   );
 }
