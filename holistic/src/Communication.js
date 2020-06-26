@@ -17,7 +17,8 @@ function Communication(props) {
     axios.get("https://pokeapi.co/api/v2/pokemon/1")
       .then((res)=>{
         console.log(res);
-        setPoke('Get PokeAPI Success');
+        // setPoke('Get PokeAPI Success');
+        setPoke(JSON.stringify(res.data.abilities[0].ability.name));
       });
   }
   return (
