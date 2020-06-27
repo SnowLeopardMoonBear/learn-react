@@ -5,11 +5,12 @@ const Wrapper = Styled.div`
   background-color: #eeeefa;
 `;
 
-function DBComponent() {
+function DBComponent(props) {
   return (
     <Wrapper>
       <div>
         <h1>Place for DB</h1>
+        <span>{props.reduxText}</span>
       </div>
     </Wrapper>
   );
